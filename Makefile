@@ -12,16 +12,6 @@ install:
 	bower install
 
 
-.PHONY: test
-test: ## Run the test watcher
-	pulp test
-
-
-.PHONY: test-watch
-test-watch: ## Run the tests once
-	pulp --watch test
-
-
 .PHONY: build-watch
 build-watch: ## Incrementally compile the project
 	pulp --watch build --include src:test
@@ -30,11 +20,6 @@ build-watch: ## Incrementally compile the project
 .PHONY: build
 build: ## Compile the project once
 	pulp build --include src:test
-
-
-.PHONY: run-watch
-run-watch: ## Run test when files change
-	pulp --watch run
 
 
 .PHONY: deploy
