@@ -40,7 +40,7 @@ app = do
 
 -- Define the AWS Lambda handler
 
-handler :: HttpHandler
+handler :: Lambda.HttpHandler
 handler =
   Lambda.makeHandler app
 ```
