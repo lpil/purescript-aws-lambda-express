@@ -1,4 +1,4 @@
-# purescript-aws-serverless-express
+# purescript-aws-lambda-express
 
 Catchy name, no?
 
@@ -15,7 +15,7 @@ serverless compute service. Under the hood it uses Amazon's
 ## Show me how it works
 
 ```sh
-bower install --save purescript-aws-serverless-express purescript-express
+bower install --save purescript-aws-lambda-express purescript-express
 npm install --save aws-serverless-express express
 ```
 

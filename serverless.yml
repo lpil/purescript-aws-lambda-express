@@ -1,4 +1,4 @@
-service: purescript-aws-serverless-express-test
+service: purescript-aws-lambda-express-test
 
 provider:
   name: aws
