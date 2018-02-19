@@ -66,7 +66,7 @@ evening to this. 😓
 - Dedicated servers may be cheaper for high traffic apps.
 - With infrequent traffic [cold starts][cold-starts] can impact response time.
 - Compiling native extensions can be fiddly.
-- Any local state is ethereal and cannot be relied upon..
+- Any in-memory or on-filesystem state is ethereal and may be deleted between requests.
 
 [cold-starts]: https://aws.amazon.com/blogs/compute/container-reuse-in-lambda/
 
