@@ -73,7 +73,7 @@ evening to this. 😓
 
 ## Is this ready for production?
 
-I've used AWS for production workloads since 2016.
+I've used AWS Lambda for production workloads since 2016.
 
 Or do you mean this library? Read the source, it's very small.
 
