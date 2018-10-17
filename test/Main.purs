@@ -1,33 +1,33 @@
-module Main
+module Test.Main
   ( handler
   ) where
 
 import Prelude (discard)
-import Control.Monad.Eff.Exception (Error, message)
+import Effect.Exception (Error, message)
 import Node.Express.App (App, useOnError, use, get)
 import Node.Express.Handler (Handler)
 import Node.Express.Response (sendJson, setStatus)
 import Network.AWS.Lambda.Express
 
 
-errorHandler :: forall e. Error -> Handler e
+errorHandler :: Error -> Handler
 errorHandler err = do
   setStatus 400
   sendJson { error: message err }
 
 
-notFoundHandler :: forall e. Handler e
+notFoundHandler :: Handler
 notFoundHandler = do
   setStatus 404
   sendJson { error: "resource not found" }
 
 
-indexHandler :: forall e. Handler e
+indexHandler :: Handler
 indexHandler = do
   sendJson { status: "ok" }
 
 
-app :: forall e. App e
+app :: App
 app = do
   get "/" indexHandler
   use notFoundHandler
